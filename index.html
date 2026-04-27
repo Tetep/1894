@@ -32,7 +32,7 @@
           <a href="why.html">Why</a>
           <a href="market-rates.html">Market Rates</a>
           <a href="index.html#events">Events</a>
-          <a href="index.html#inquiry">Rent the Space</a>
+          <a href="#event-request-popup" data-open-event-request>Rent the Space</a>
         </div>
       </details>
       <nav class="desktop-nav" aria-label="Primary navigation">
@@ -44,9 +44,9 @@
         <a href="why.html">Why</a>
         <a href="market-rates.html">Market Rates</a>
         <a href="/#events">Events</a>
-        <a href="/#inquiry">Contact / Rent the Space</a>
+        <a href="#event-request-popup" data-open-event-request>Contact / Rent the Space</a>
       </nav>
-      <a class="button button-dark header-cta" href="/#inquiry">Rent the Space</a>
+      <a class="button button-dark header-cta" href="#event-request-popup" data-open-event-request>Rent the Space</a>
     </header>
 
     <main id="home">
@@ -70,7 +70,7 @@
             Located at <strong>1 E Kansas St</strong>, now operated by <strong>ACA Business Club Liberty</strong>.
           </p>
           <div class="hero-actions" aria-label="Primary actions">
-            <a class="button button-light" href="#inquiry">Request Availability</a>
+            <a class="button button-light" href="#event-request-popup" data-open-event-request>Request Availability</a>
             <a class="button button-outline-light" href="#tour">Take the 3D Tour</a>
           </div>
         </div>
@@ -100,7 +100,7 @@
           </article>
         </div>
         <div class="center-cta">
-          <a class="button button-dark" href="#inquiry">Check Availability</a>
+          <a class="button button-dark" href="#event-request-popup" data-open-event-request>Check Availability</a>
         </div>
       </section>
 
@@ -109,7 +109,7 @@
           <p class="eyebrow dark">Receptions & Celebrations</p>
           <h2>Reception-Ready. Guest-Ready. Photo-Ready.</h2>
           <p>From seated dinners to cocktail-style celebrations, 1894 Event Space gives your guests a warm, historic setting with room to gather, celebrate, and remember the night.</p>
-          <a class="button button-dark" href="#inquiry">Request Availability</a>
+          <a class="button button-dark" href="#event-request-popup" data-open-event-request>Request Availability</a>
         </div>
         <div class="feature-gallery four-pack">
           <img class="large" loading="lazy" src="assets/home/venue-room-pan.gif" alt="Animated view of the main event room with brick walls and hardwood floors">
@@ -201,7 +201,7 @@
             <li>Private receptions</li>
             <li>Family gatherings</li>
           </ul>
-          <a class="button button-dark" href="#inquiry">Plan Your Private Event</a>
+          <a class="button button-dark" href="#event-request-popup" data-open-event-request>Plan Your Private Event</a>
         </div>
         <div class="feature-gallery four-pack">
           <img class="large" loading="lazy" src="https://restoration1894.com/wp-content/uploads/2019/05/bride3-683x1024.png" alt="Private event portrait moment on the historic venue stairs">
@@ -238,7 +238,7 @@
               </ul>
             </div>
           </div>
-          <a class="button button-light" href="#inquiry">Ask About Business Event Rentals</a>
+          <a class="button button-light" href="#event-request-popup" data-open-event-request>Ask About Business Event Rentals</a>
         </div>
         <div class="business-images">
           <img loading="lazy" src="assets/home/brick-lounge-room.jpg" alt="Flexible lounge and event room suitable for business rentals">
@@ -307,47 +307,32 @@
             <span>1 E Kansas St, Liberty, MO 64068</span>
           </div>
         </div>
-        <form class="inquiry-form" aria-label="Venue rental inquiry form">
-          <label>
-            Name
-            <input name="name" autocomplete="name" required>
-          </label>
-          <label>
-            Email
-            <input type="email" name="email" autocomplete="email" required>
-          </label>
-          <label>
-            Phone
-            <input type="tel" name="phone" autocomplete="tel">
-          </label>
-          <label>
-            Event Type
-            <select name="event_type">
-              <option>Private event</option>
-              <option>Reception</option>
-              <option>Shower</option>
-              <option>Business event</option>
-              <option>Community gathering</option>
-              <option>Workshop or training</option>
-            </select>
-          </label>
-          <label>
-            Preferred Date
-            <input type="date" name="preferred_date">
-          </label>
-          <label>
-            Estimated Guest Count
-            <input type="number" name="guest_count" min="1" max="300">
-          </label>
-          <label class="full">
-            Message
-            <textarea name="message" rows="4"></textarea>
-          </label>
-          <button class="button button-dark" type="submit">Request Availability</button>
-          <a class="button button-outline-dark" href="#tour">Schedule a Private Tour</a>
-        </form>
+        <div class="inquiry-form ninja-form-panel" aria-label="Venue rental inquiry form">
+          <iframe
+            src="https://links.ninja360.net/widget/form/Wzm3oKyw3HILRRzgmg9f"
+            title="Banquet Hall Event Request"
+            loading="lazy"
+          ></iframe>
+        </div>
       </section>
     </main>
+
+    <dialog class="event-request-modal" id="event-request-popup" aria-labelledby="event-request-title">
+      <div class="event-request-shell">
+        <div class="event-request-bar">
+          <div>
+            <p class="eyebrow dark">Event Request</p>
+            <h2 id="event-request-title">Check Availability</h2>
+          </div>
+          <button class="event-request-close" type="button" data-close-event-request aria-label="Close event request form">Close</button>
+        </div>
+        <iframe
+          src="https://links.ninja360.net/widget/form/Wzm3oKyw3HILRRzgmg9f"
+          title="Banquet Hall Event Request"
+          loading="lazy"
+        ></iframe>
+      </div>
+    </dialog>
 
     <footer class="site-footer">
       <div>
@@ -376,5 +361,6 @@
         <a class="foundation-secret-link" href="foundation.html" aria-label="ACA Liberty Digital Foundation">Foundation</a>
       </div>
     </footer>
+    <script src="event-request.js"></script>
   </body>
 </html>
