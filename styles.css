@@ -1164,6 +1164,137 @@ h3 {
   margin-top: 10px;
 }
 
+.event-style-combo {
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(340px, 0.92fr);
+  gap: clamp(34px, 5vw, 78px);
+  align-items: center;
+  background: var(--paper);
+}
+
+.decor-parallax-carousel {
+  position: relative;
+  min-height: clamp(430px, 46vw, 620px);
+  overflow: hidden;
+}
+
+.decor-parallax-carousel::before {
+  position: absolute;
+  inset: 12% 2% 8% 10%;
+  content: "";
+  background: rgba(181, 137, 77, 0.13);
+  filter: blur(34px);
+}
+
+.decor-slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  animation: decorSlideFade 9s infinite;
+}
+
+.decor-slide:nth-child(2) {
+  animation-delay: 3s;
+}
+
+.decor-slide:nth-child(3) {
+  animation-delay: 6s;
+}
+
+.decor-layer {
+  position: absolute;
+  display: block;
+  object-fit: cover;
+  box-shadow: 0 24px 54px rgba(38, 29, 23, 0.2);
+  animation: decorLayerDrift 9s ease-in-out infinite;
+}
+
+.decor-layer-wide {
+  top: 9%;
+  left: 2%;
+  width: 60%;
+  height: 64%;
+}
+
+.decor-layer-card {
+  top: 26%;
+  left: 35%;
+  width: 34%;
+  height: 50%;
+  animation-name: decorLayerDriftReverse;
+}
+
+.decor-layer-tall {
+  right: 1%;
+  bottom: 6%;
+  width: 38%;
+  height: 72%;
+  animation-duration: 10s;
+}
+
+.decor-slide:nth-child(2) .decor-layer,
+.decor-slide:nth-child(3) .decor-layer {
+  animation-delay: inherit;
+}
+
+@keyframes decorSlideFade {
+  0%,
+  5% {
+    opacity: 0;
+  }
+
+  12%,
+  34% {
+    opacity: 1;
+  }
+
+  41%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes decorLayerDrift {
+  0% {
+    transform: translate3d(-18px, 16px, 0) scale(1.04);
+  }
+
+  48% {
+    transform: translate3d(14px, -10px, 0) scale(1);
+  }
+
+  100% {
+    transform: translate3d(22px, -14px, 0) scale(1.03);
+  }
+}
+
+@keyframes decorLayerDriftReverse {
+  0% {
+    transform: translate3d(22px, -12px, 0) scale(1.03);
+  }
+
+  48% {
+    transform: translate3d(-12px, 12px, 0) scale(1);
+  }
+
+  100% {
+    transform: translate3d(-20px, 16px, 0) scale(1.04);
+  }
+}
+
+.event-style-copy {
+  display: grid;
+  gap: clamp(30px, 4vw, 52px);
+}
+
+.compact-detail-cards {
+  margin-top: 22px;
+}
+
+.compact-detail-cards article {
+  padding: 18px 20px;
+}
+
 .feature-gallery {
   display: grid;
   gap: 14px;
@@ -2289,6 +2420,7 @@ blockquote {
   .offer-grid,
   .snapshot-grid,
   .venue-story-combo,
+  .event-style-combo,
   .image-story,
   .image-story-reverse,
   .details-layout,
@@ -2320,6 +2452,10 @@ blockquote {
 
   .history-mini-carousel {
     min-height: clamp(300px, 62vw, 460px);
+  }
+
+  .decor-parallax-carousel {
+    min-height: clamp(360px, 64vw, 520px);
   }
 
   .history-image-stack,
@@ -2554,6 +2690,31 @@ blockquote {
 
   .history-mini-carousel {
     min-height: 320px;
+  }
+
+  .decor-parallax-carousel {
+    min-height: 420px;
+  }
+
+  .decor-layer-wide {
+    top: 2%;
+    left: 0;
+    width: 72%;
+    height: 52%;
+  }
+
+  .decor-layer-card {
+    top: 34%;
+    left: 8%;
+    width: 44%;
+    height: 44%;
+  }
+
+  .decor-layer-tall {
+    right: 0;
+    bottom: 4%;
+    width: 54%;
+    height: 58%;
   }
 
   .then-now-grid img,
