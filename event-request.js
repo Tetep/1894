@@ -4,7 +4,6 @@
 
   var openButtons = document.querySelectorAll("[data-open-event-request]");
   var closeButtons = modal.querySelectorAll("[data-close-event-request]");
-  var storageKey = "eventRequestPopupSeen:" + window.location.pathname;
 
   function openModal(event) {
     if (event) event.preventDefault();
@@ -38,13 +37,4 @@
   window.addEventListener("keydown", function (event) {
     if (event.key === "Escape" && modal.hasAttribute("open")) closeModal();
   });
-
-  try {
-    if (!sessionStorage.getItem(storageKey)) {
-      sessionStorage.setItem(storageKey, "true");
-      window.setTimeout(openModal, 1400);
-    }
-  } catch (error) {
-    window.setTimeout(openModal, 1400);
-  }
 })();
