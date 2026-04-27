@@ -1433,7 +1433,6 @@ textarea {
 .history-hero img:not(.no-antique),
 .archive-carousel img:not(.no-antique),
 .origin-section img:not(.no-antique),
-.square-section img:not(.no-antique),
 .history-story img:not(.no-antique),
 .merchant-section img:not(.no-antique),
 .castle-section img:not(.no-antique),
@@ -1585,25 +1584,6 @@ textarea {
 .origin-visuals img {
   aspect-ratio: 4 / 3;
   box-shadow: var(--shadow);
-}
-
-.square-section {
-  background: var(--paper);
-}
-
-.square-grid {
-  display: grid;
-  grid-template-columns: 1.4fr 0.8fr 0.8fr;
-  grid-auto-rows: 280px;
-  gap: 14px;
-}
-
-.square-grid img {
-  box-shadow: var(--shadow);
-}
-
-.square-grid img:first-child {
-  grid-row: span 2;
 }
 
 .history-image-stack {
@@ -1946,15 +1926,6 @@ blockquote {
     grid-template-columns: 1fr 1fr;
   }
 
-  .square-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .square-grid img:first-child {
-    grid-column: span 2;
-    grid-row: auto;
-  }
-
   .timeline-grid,
   .merchant-card-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -2151,7 +2122,6 @@ blockquote {
   .castle-images,
   .origin-visuals,
   .history-teaser-images,
-  .square-grid,
   .timeline-grid,
   .merchant-card-grid,
   .then-now-grid {
@@ -2168,16 +2138,6 @@ blockquote {
 
   .then-now-grid {
     grid-auto-rows: auto;
-  }
-
-  .square-grid {
-    grid-auto-rows: auto;
-  }
-
-  .square-grid img,
-  .square-grid img:first-child {
-    grid-column: auto;
-    aspect-ratio: 4 / 5;
   }
 
   .then-now-grid img,
