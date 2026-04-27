@@ -1408,6 +1408,70 @@ textarea {
   border-bottom: 1px solid var(--line);
 }
 
+.restoration-roots {
+  display: grid;
+  grid-template-columns: minmax(0, 0.92fr) minmax(340px, 1.08fr);
+  gap: clamp(34px, 6vw, 82px);
+  align-items: center;
+  background:
+    linear-gradient(0deg, rgba(255, 253, 248, 0.94), rgba(255, 253, 248, 0.94)),
+    repeating-linear-gradient(45deg, rgba(181, 137, 77, 0.13) 0 2px, transparent 2px 10px);
+}
+
+.restoration-roots-copy {
+  max-width: 760px;
+}
+
+.restoration-roots-copy p {
+  color: var(--muted);
+  font-size: 18px;
+}
+
+.restoration-roots-copy .button {
+  margin-top: 12px;
+}
+
+.restoration-roots-media {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 14px;
+  align-items: stretch;
+}
+
+.restoration-roots-media figure {
+  position: relative;
+  min-height: 210px;
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid #e8dcc9;
+  background: var(--white);
+  box-shadow: 0 12px 32px rgba(38, 29, 23, 0.1);
+}
+
+.restoration-roots-media .roots-feature {
+  grid-row: span 2;
+}
+
+.restoration-roots-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: sepia(0.34) saturate(0.82) contrast(0.94) brightness(0.98);
+}
+
+.restoration-roots-media figcaption {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  left: 12px;
+  padding: 9px 10px;
+  color: var(--white);
+  background: rgba(17, 19, 22, 0.74);
+  font-size: 12px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
 .archive-carousel-heading {
   max-width: 720px;
   margin-bottom: 22px;
@@ -1803,6 +1867,7 @@ blockquote {
   .inquiry-form,
   .history-teaser,
   .origin-section,
+  .restoration-roots,
   .history-hero,
   .history-story,
   .castle-section,
@@ -1826,6 +1891,7 @@ blockquote {
   .history-image-stack,
   .castle-images,
   .origin-visuals,
+  .restoration-roots-media,
   .history-teaser-images {
     grid-template-columns: 1fr 1fr;
   }
@@ -1976,6 +2042,19 @@ blockquote {
   .foundation-section-graphic img {
     aspect-ratio: 4 / 3;
   }
+
+  .restoration-roots-media {
+    grid-template-columns: 1fr;
+  }
+
+  .restoration-roots-media .roots-feature {
+    grid-row: auto;
+  }
+
+  .restoration-roots-media figure {
+    min-height: 240px;
+  }
+
   .section-pad,
   .inquiry-section {
     padding-right: 18px;
