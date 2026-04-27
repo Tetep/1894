@@ -27,7 +27,7 @@
           <a href="why.html">Why</a>
           <a href="market-rates.html">Market Rates</a>
           <a href="index.html#events">Events</a>
-          <a href="index.html#inquiry">Rent the Space</a>
+          <a href="#event-request-popup" data-open-event-request>Rent the Space</a>
         </div>
       </details>
       <nav class="desktop-nav" aria-label="Primary navigation">
@@ -39,9 +39,9 @@
         <a href="why.html">Why</a>
         <a href="market-rates.html">Market Rates</a>
         <a href="index.html#events">Events</a>
-        <a href="index.html#inquiry">Contact / Rent the Space</a>
+        <a href="#event-request-popup" data-open-event-request>Contact / Rent the Space</a>
       </nav>
-      <a class="button button-dark header-cta" href="index.html#inquiry">Rent the Space</a>    </header>
+      <a class="button button-dark header-cta" href="#event-request-popup" data-open-event-request>Rent the Space</a>    </header>
 
     <main>      <!-- HERO -->
       <section class="hero foundation-hero" aria-labelledby="hero-title">
@@ -201,9 +201,27 @@
       </section>
 </main>
 
+    <dialog class="event-request-modal" id="event-request-popup" aria-labelledby="event-request-title">
+      <div class="event-request-shell">
+        <div class="event-request-bar">
+          <div>
+            <p class="eyebrow dark">Event Request</p>
+            <h2 id="event-request-title">Check Availability</h2>
+          </div>
+          <button class="event-request-close" type="button" data-close-event-request aria-label="Close event request form">Close</button>
+        </div>
+        <iframe
+          src="https://links.ninja360.net/widget/form/Wzm3oKyw3HILRRzgmg9f"
+          title="Banquet Hall Event Request"
+          loading="lazy"
+        ></iframe>
+      </div>
+    </dialog>
+
     <footer class="site-footer">
       <div><h2>1894 Event Space</h2></div>
     </footer>
 
+    <script src="event-request.js"></script>
   </body>
 </html>
