@@ -3,110 +3,236 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>The Offer | ACA Liberty Digital Foundation</title>
+    <title>The Offer | 1894 Event Space</title>
     <meta name="description" content="The ACA Liberty partnership offer for the 1894 Event Space digital foundation.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <style>
+      .offer-mock {
+        margin: 0;
+        color: #1a1a1a;
+        background: #fff;
+        font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        line-height: 1.6;
+      }
+
+      .offer-mock .section {
+        max-width: 1100px;
+        margin: auto;
+        padding: 80px 20px;
+      }
+
+      .offer-mock h1,
+      .offer-mock h2,
+      .offer-mock h3 {
+        margin: 0 0 20px;
+        font-weight: 700;
+        line-height: 1.2;
+      }
+
+      .offer-mock h1 {
+        font-size: clamp(2.7rem, 6vw, 3.4rem);
+      }
+
+      .offer-mock h2 {
+        font-size: clamp(2rem, 4vw, 2.2rem);
+      }
+
+      .offer-mock h3 {
+        font-size: 1.4rem;
+      }
+
+      .offer-mock p {
+        font-size: 1.15rem;
+      }
+
+      .offer-mock-hero {
+        padding: 160px 20px;
+        color: #fff;
+        background:
+          linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
+          url("assets/offer/aca-logo.jpg");
+        background-position: center;
+        background-size: cover;
+        text-align: center;
+      }
+
+      .offer-mock-hero h1 {
+        max-width: 900px;
+        margin: auto;
+      }
+
+      .offer-mock-hero p {
+        max-width: 700px;
+        margin: 20px auto;
+        opacity: 0.9;
+        font-size: 1.4rem;
+      }
+
+      .offer-mock .cta-btn {
+        display: inline-block;
+        margin-top: 30px;
+        border-radius: 10px;
+        padding: 16px 36px;
+        color: #fff;
+        background: #00c853;
+        font-size: 1.2rem;
+        font-weight: 700;
+        text-decoration: none;
+        transition: background 0.2s ease;
+      }
+
+      .offer-mock .cta-btn:hover,
+      .offer-mock .cta-btn:focus {
+        background: #00a844;
+      }
+
+      .offer-mock .cta-btn.dark-btn {
+        margin-left: 10px;
+        background: #333;
+      }
+
+      .offer-mock .cta-btn.dark-btn:hover,
+      .offer-mock .cta-btn.dark-btn:focus {
+        background: #111;
+      }
+
+      .offer-mock .image-block {
+        margin: 40px 0;
+        text-align: center;
+      }
+
+      .offer-mock .image-block img {
+        width: auto;
+        max-width: 100%;
+        height: auto;
+        border-radius: 14px;
+        background: transparent;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      }
+
+      .offer-mock .offer-list {
+        margin-top: 20px;
+      }
+
+      .offer-mock .offer-list li {
+        margin: 12px 0;
+        font-size: 1.15rem;
+      }
+
+      .offer-mock .dark {
+        padding: 100px 20px;
+        color: #fff;
+        background: #111;
+        text-align: center;
+      }
+
+      .offer-mock .dark p {
+        max-width: 700px;
+        margin: 20px auto;
+        opacity: 0.9;
+      }
+
+      .offer-mock-footer {
+        padding: 40px 20px;
+        color: #555;
+        background: #f5f5f5;
+        font-size: 0.95rem;
+        text-align: center;
+      }
+
+      @media (max-width: 640px) {
+        .offer-mock-hero {
+          padding: 110px 18px;
+        }
+
+        .offer-mock .section {
+          padding: 58px 18px;
+        }
+
+        .offer-mock .cta-btn,
+        .offer-mock .cta-btn.dark-btn {
+          display: block;
+          margin-right: 0;
+          margin-left: 0;
+          text-align: center;
+        }
+      }
+    </style>
   </head>
-  <body>
-    <header class="site-header">
-      <a class="brand" href="index.html" aria-label="1894 Event Space home">
-        <img class="brand-logo" src="https://restoration1894.com/wp-content/uploads/2019/02/Restoration-1894-Website.png" alt="Restoration 1894 logo">
-        <span>
-          <strong>1894 Event Space</strong>
-          <small>Hosted by ACA Business Club Liberty</small>
-        </span>
-      </a>
-      <details class="mobile-nav">
-        <summary>Menu</summary>
-        <div>
-          <a href="index.html">Home</a>
-          <a href="history.html">History</a>
-          <a href="foundation.html">Foundation</a>
-          <a href="why.html">Why</a>
-          <a href="market-rates.html">Market Rates</a>
-          <a href="foundation.html#aca-calendar">Events</a>
-          <a href="#event-request-popup" data-open-event-request>Rent the Space</a>
-          <a href="offer.html" class="menu-cta">The Offer</a>
-        </div>
-      </details>
-      <nav class="desktop-nav" aria-label="Primary navigation">
-        <a href="index.html">Home</a>
-        <a href="index.html#snapshot">The Space</a>
-        <a href="index.html#tour">Virtual Tour</a>
-        <a href="history.html">History</a>
-        <a href="foundation.html">Foundation</a>
-        <a href="why.html">Why</a>
-        <a href="market-rates.html">Market Rates</a>
-        <a href="foundation.html#aca-calendar">Events</a>
-        <a href="#event-request-popup" data-open-event-request>Contact / Rent the Space</a>
-        <a href="offer.html" class="menu-cta">The Offer</a>
-      </nav>
-      <a class="button button-dark header-cta" href="#event-request-popup" data-open-event-request>Rent the Space</a>
-    </header>
 
-    <main>
-      <section class="offer-page-section" aria-labelledby="offer-title">
-        <div class="offer-page-inner">
-          <div class="offer-aca-card">
-            <img src="assets/offer/aca-logo.jpg" alt="ACA Business Club Liberty, MO">
-            <p><strong>A Proposal Prepared For</strong> ACA Business Club and the 1894 Event Space</p>
-          </div>
+  <body class="offer-mock">
+    <section class="offer-mock-hero">
+      <h1>You don't pay for the build. I only win when you win.</h1>
+      <p>A partnership structure for 1894 Event Space built on shared risk, visible numbers, and a real 90-day exit.</p>
+      <a href="#event-request-popup" class="cta-btn" data-open-event-request>Start the Conversation</a>
+    </section>
 
-          <p class="offer-kicker">The Partnership</p>
-          <h1 id="offer-title">You don't pay for the build. <span>I only win when you win.</span></h1>
-          <p class="offer-intro">A partnership structure for 1894 Event Space built on shared risk, visible numbers, and a real 90-day exit.</p>
+    <section class="section">
+      <h2>A Proposal Prepared For</h2>
+      <h3>ACA Business Club &amp; The 1894 Event Space</h3>
 
-          <div class="offer-grid">
-            <article>
-              <img src="assets/offer/map-master.png" alt="">
-              <h2>The deal, in plain language.</h2>
-              <ul>
-                <li><strong>Zero upfront.</strong> I take the risk on the build.</li>
-                <li><strong>35% of all bookings.</strong> I only earn when the space earns.</li>
-                <li><strong>One-year contract.</strong> With a 3-month review built in.</li>
-                <li><strong>Ninja-360 system.</strong> Every booking runs through one visible system.</li>
-              </ul>
-            </article>
-            <article>
-              <img src="assets/offer/ninja-media.png" alt="">
-              <h2>Your 90-day escape hatch.</h2>
-              <p>If it is not working at 90 days, you walk free and clear. No remaining balance. No hard feelings.</p>
-              <p>After the review, we are committed for the year because by then we will both know whether it is working.</p>
-            </article>
-            <article>
-              <img src="assets/offer/ninja-local.png" alt="">
-              <h2>You see what I see.</h2>
-              <ul>
-                <li>Every booking documented and traceable</li>
-                <li>All numbers visible to both sides</li>
-                <li>Checks and balances agreed to before day one</li>
-                <li>If a number feels off, we sit down and look at the data</li>
-              </ul>
-            </article>
-          </div>
+      <div class="image-block">
+        <img src="assets/offer/map-master.png" alt="MAP System">
+      </div>
+    </section>
 
-          <div class="offer-frame">
-            <p>This is not a vendor pitch. It is a partnership. The building already has the history, the space, and the location. My job is to help the right people find it, feel it, and book it.</p>
-            <div class="hero-actions">
-              <a class="button button-light" href="#event-request-popup" data-open-event-request>Let's Talk</a>
-              <a class="button button-outline-light" href="foundation.html">See The System</a>
-            </div>
-          </div>
+    <section class="section">
+      <h2>The Deal, in Plain Language</h2>
 
-          <div class="offer-signature">
-            <img src="assets/offer/ninja360-badge.png" alt="Ninja-360 Cinematic Shot">
-            <div>
-              <span>Built and Powered By</span>
-              <strong>Ninja-360 Cinematic Shot</strong>
-              <p>Local visibility. Real systems. Skin in the game. 1-844-360-NINJA</p>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
+      <ul class="offer-list">
+        <li><strong>Zero upfront.</strong> I take the risk on the build.</li>
+        <li><strong>35% of all bookings.</strong> I only earn when the space earns.</li>
+        <li><strong>One-year contract.</strong> With a 3-month review built in.</li>
+        <li><strong>Ninja-360 system.</strong> Every booking runs through one visible system.</li>
+      </ul>
+
+      <div class="image-block">
+        <img src="assets/offer/ninja-media.png" alt="Ninja Media">
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Your 90-Day Escape Hatch</h2>
+      <p>If it is not working at 90 days, you walk free and clear. No remaining balance. No hard feelings.</p>
+      <p>After the review, we are committed for the year because by then we will both know whether it is working.</p>
+
+      <div class="image-block">
+        <img src="assets/offer/ninja-local.png" alt="Ninja Local">
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>You See What I See</h2>
+
+      <ul class="offer-list">
+        <li>Every booking documented and traceable</li>
+        <li>All numbers visible to both sides</li>
+        <li>Checks and balances agreed to before day one</li>
+        <li>If a number feels off, we sit down and look at the data</li>
+      </ul>
+
+      <p>This is not a vendor pitch. It is a partnership. The building already has the history, the space, and the location. My job is to help the right people find it, feel it, and book it.</p>
+
+      <a href="#event-request-popup" class="cta-btn" data-open-event-request>Let's Talk</a>
+      <a href="foundation.html" class="cta-btn dark-btn">See the System</a>
+
+      <div class="image-block">
+        <img src="assets/offer/ninja360-badge.png" alt="Ninja360 Badge" style="max-width: 200px;">
+      </div>
+    </section>
+
+    <section class="dark">
+      <h2>Local Visibility. Real Systems. Skin in the Game.</h2>
+      <p>1-844-360-NINJA</p>
+      <a href="#event-request-popup" class="cta-btn" data-open-event-request>Check Availability</a>
+    </section>
+
+    <footer class="offer-mock-footer">
+      1894 Event Space - Hosted by ACA Business Club Liberty
+    </footer>
 
     <dialog class="event-request-modal" id="event-request-popup" aria-labelledby="event-request-title">
       <div class="event-request-shell">
@@ -125,26 +251,6 @@
       </div>
     </dialog>
 
-    <footer class="site-footer">
-      <div>
-        <h2>1894 Event Space</h2>
-        <p>Historic event space on Liberty Square available for private events, business gatherings, celebrations, and community rentals.</p>
-      </div>
-      <div>
-        <h3>Quick Links</h3>
-        <a href="index.html">Home</a>
-        <a href="history.html">History</a>
-        <a href="foundation.html">Foundation</a>
-        <a href="why.html">Why</a>
-        <a href="market-rates.html">Market Rates</a>
-        <a href="offer.html">The Offer</a>
-      </div>
-      <div>
-        <h3>Positioning</h3>
-        <p>1894 Event Space<br>Hosted by ACA Business Club Liberty</p>
-      </div>
-      <a class="prep-secret-link" href="prep-notes.html" target="_blank" rel="noopener">Strategy</a>
-    </footer>
     <script src="event-request.js"></script>
   </body>
 </html>
