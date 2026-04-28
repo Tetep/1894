@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>The Offer | 1894 Event Space</title>
-    <meta name="description" content="The ACA Liberty partnership offer for the 1894 Event Space digital foundation.">
+    <title>1894 Event Space Partnership Overview</title>
+    <meta name="description" content="A private partnership overview for the 1894 Event Space digital foundation.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -177,6 +177,26 @@
         background: #111;
       }
 
+      .secret-detail-btn {
+        display: inline-block;
+        margin: 10px 0 0;
+        border: 0;
+        border-radius: 999px;
+        padding: 9px 15px;
+        color: #fff;
+        background: #111;
+        font: inherit;
+        font-size: 0.95rem;
+        font-weight: 800;
+        cursor: pointer;
+        box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
+      }
+
+      .secret-detail-btn:hover,
+      .secret-detail-btn:focus {
+        background: #f97316;
+      }
+
       .offer-card {
         position: relative;
         overflow: hidden;
@@ -257,6 +277,84 @@
         text-align: center;
       }
 
+      .secret-number-modal {
+        width: min(92vw, 560px);
+        border: 0;
+        border-radius: 24px;
+        padding: 0;
+        color: #111827;
+        background: #fff;
+        box-shadow: 0 28px 90px rgba(0, 0, 0, 0.45);
+      }
+
+      .secret-number-modal::backdrop {
+        background: rgba(15, 23, 42, 0.78);
+        backdrop-filter: blur(4px);
+      }
+
+      .secret-number-card {
+        position: relative;
+        padding: clamp(22px, 5vw, 34px);
+        text-align: center;
+      }
+
+      .secret-number-close {
+        position: absolute;
+        top: 12px;
+        right: 14px;
+        z-index: 5;
+        border: 0;
+        background: transparent;
+        color: #64748b;
+        font-size: 2rem;
+        line-height: 1;
+        cursor: pointer;
+      }
+
+      .secret-gif {
+        display: block;
+        width: 100%;
+        max-width: 460px;
+        margin: 0 auto 20px;
+        border-radius: 18px;
+        background: #111;
+      }
+
+      .secret-number-card h2 {
+        margin-bottom: 8px;
+        font-size: clamp(1.7rem, 5vw, 2.4rem);
+      }
+
+      .private-offer-subtitle {
+        margin: 0 0 14px;
+        color: #f97316;
+        font-size: 1.35rem;
+        font-weight: 900;
+      }
+
+      .private-offer-line {
+        max-width: 420px;
+        margin: 0 auto 18px;
+      }
+
+      .private-offer-percent {
+        display: inline-block;
+        margin: 4px auto 12px;
+        border-radius: 999px;
+        padding: 12px 22px;
+        color: #fff;
+        background: #111827;
+        font-size: clamp(1.45rem, 5vw, 2.1rem);
+        font-weight: 900;
+      }
+
+      .private-offer-note {
+        max-width: 420px;
+        margin: 0 auto;
+        color: #64748b;
+        font-size: 0.98rem;
+      }
+
       @media (max-width: 680px) {
         .offer-hero {
           min-height: 560px;
@@ -284,8 +382,8 @@
   <body class="offer-page">
     <section class="offer-hero">
       <div class="offer-hero-content">
-        <h1>You don't pay for the build. I only win when you win.</h1>
-        <p>A partnership structure for 1894 Event Space built on shared risk, visible numbers, and a real 90-day exit.</p>
+        <h1>A Partnership Built on Shared Risk and Shared Upside.</h1>
+        <p>A private partnership structure for 1894 Event Space built on shared risk, visible numbers, and a real 90-day review.</p>
         <a href="#event-request-popup" class="cta-btn" data-open-event-request>Start the Conversation</a>
       </div>
     </section>
@@ -301,17 +399,20 @@
         <div class="offer-card belt-brown">
           <h2>The Deal, in Plain Language</h2>
           <ul class="offer-list">
-            <li><strong>Zero upfront.</strong> I take the risk on the build.</li>
-            <li><strong>35% of all bookings.</strong> I only earn when the space earns.</li>
-            <li><strong>One-year contract.</strong> With a 3-month review built in.</li>
+            <li><strong>No traditional upfront build fee.</strong> I carry the initial build risk for this specific partnership.</li>
+            <li>
+              <strong>Performance-based structure.</strong> I only earn when the space earns.<br>
+              <button class="secret-detail-btn" type="button" data-open-secret-number>View private partnership detail</button>
+            </li>
+            <li><strong>One-year partnership term.</strong> With a 90-day review built in.</li>
             <li><strong>Ninja-360 system.</strong> Every booking runs through one visible system.</li>
           </ul>
         </div>
 
         <div class="offer-card belt-white">
           <h2>Your 90-Day Escape Hatch</h2>
-          <p>If it is not working at 90 days, you walk free and clear. No remaining balance. No hard feelings.</p>
-          <p>After the review, we are committed for the year because by then we will both know whether it is working.</p>
+          <p>If the partnership is not producing value within the first 90 days, either side can end the agreement without a remaining build balance.</p>
+          <p>After the 90-day review, the agreement continues for the remainder of the one-year partnership term.</p>
         </div>
 
         <div class="offer-card cinematic-shot">
@@ -323,7 +424,7 @@
             <li>If a number feels off, we sit down and look at the data</li>
           </ul>
           <p>This is not a vendor pitch. It is a partnership. The building already has the history, the space, and the location. My job is to help the right people find it, feel it, and book it.</p>
-          <a href="mailto:tpetet@ninja-360.com?subject=1894%20Event%20Space%20Offer&body=Tim%20Petet%0AOwner%20%2F%20Founder%0ANinja-360%20Digital%20Media%0A%2B1%20(816)%20825-9847" class="cta-btn">Let's Talk</a>
+          <a href="mailto:tpetet@ninja-360.com?subject=1894%20Event%20Space%20Offer&body=Tim%20Petet%0AOwner%20%2F%20Founder%0ANinja-360%20Digital%20Media%0A1-844-360-NINJA" class="cta-btn">Let's Talk</a>
           <a href="foundation.html" class="cta-btn dark-btn">See the System</a>
         </div>
       </section>
@@ -338,6 +439,18 @@
     <footer class="offer-footer">
       1894 Event Space - Hosted by ACA Business Club Liberty
     </footer>
+
+    <dialog class="secret-number-modal" id="secret-number-popup" aria-labelledby="secret-number-title">
+      <div class="secret-number-card">
+        <button class="secret-number-close" type="button" data-close-secret-number aria-label="Close private partnership detail">×</button>
+        <img src="assets/offer/secret-number-punch.gif" alt="Prom punch surprise gif" class="secret-gif">
+        <h2 id="secret-number-title">Looking for the $ecret number?</h2>
+        <p class="private-offer-subtitle">(iD10t Error)</p>
+        <p class="private-offer-line">Put the punch glass down, Felicia, and mind your business please. 🥷</p>
+        <p class="private-offer-percent"><strong>35% of bookings</strong></p>
+        <p class="private-offer-note">Not a public coupon. Not a standard offer. Founder-to-founder only.</p>
+      </div>
+    </dialog>
 
     <dialog class="event-request-modal" id="event-request-popup" aria-labelledby="event-request-title">
       <div class="event-request-shell">
@@ -357,5 +470,30 @@
     </dialog>
 
     <script src="event-request.js"></script>
+    <script>
+      const secretNumberModal = document.getElementById("secret-number-popup");
+      const secretNumberOpeners = document.querySelectorAll("[data-open-secret-number]");
+      const secretNumberClosers = document.querySelectorAll("[data-close-secret-number]");
+
+      secretNumberOpeners.forEach((button) => {
+        button.addEventListener("click", () => {
+          if (typeof secretNumberModal.showModal === "function") {
+            secretNumberModal.showModal();
+          }
+        });
+      });
+
+      secretNumberClosers.forEach((button) => {
+        button.addEventListener("click", () => {
+          secretNumberModal.close();
+        });
+      });
+
+      secretNumberModal.addEventListener("click", (event) => {
+        if (event.target === secretNumberModal) {
+          secretNumberModal.close();
+        }
+      });
+    </script>
   </body>
 </html>
