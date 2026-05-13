@@ -9,380 +9,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
-
   <style>
-    .offer-page {
-      margin: 0;
-      color: #1a1a1a;
-      background: #f5f5f5;
-      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      line-height: 1.6;
-    }
-
-    .offer-page .section {
-      max-width: 1100px;
-      margin: auto;
-      padding: 60px 20px;
-    }
-
-    .offer-page h1,
-    .offer-page h2,
-    .offer-page h3 {
-      margin: 0 0 20px;
-      font-weight: 700;
-      line-height: 1.2;
-    }
-
-    .offer-page h1 {
-      font-size: clamp(2.6rem, 6vw, 3.4rem);
-    }
-
-    .offer-page h2 {
-      font-size: clamp(2rem, 4vw, 2.2rem);
-    }
-
-    .offer-page h3 {
-      font-size: 1.4rem;
-    }
-
-    .offer-page p,
-    .offer-page li {
-      font-size: 1.15rem;
-    }
-
-    .offer-hero {
-      position: relative;
-      display: grid;
-      min-height: 620px;
-      place-items: center;
-      padding: 160px 20px;
-      color: #fff;
-      background:
-        linear-gradient(rgba(0, 0, 0, 0.54), rgba(0, 0, 0, 0.66)),
-        url("assets/offer/aca-logo.jpg");
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: min(1005px, 100vw) auto;
-      text-align: center;
-    }
-
-    .offer-hero::before {
-      position: absolute;
-      inset: 0;
-      content: "";
-      background: radial-gradient(circle at center, rgba(0, 0, 0, 0.18), rgba(0, 0, 0, 0.72));
-    }
-
-    .offer-hero-content {
-      position: relative;
-      z-index: 1;
-      width: min(980px, 100%);
-      margin: 0 auto;
-    }
-
-    .offer-hero h1 {
-      max-width: 920px;
-      margin-right: auto;
-      margin-left: auto;
-      text-align: center;
-      text-wrap: balance;
-      text-shadow:
-        0 2px 10px rgba(0, 0, 0, 0.92),
-        0 0 18px rgba(255, 255, 255, 0.36),
-        0 0 34px rgba(0, 200, 83, 0.32);
-    }
-
-    .offer-hero p {
-      max-width: 760px;
-      margin: 20px auto 0;
-      font-size: 1.35rem;
-      text-align: center;
-      text-wrap: balance;
-      text-shadow:
-        0 2px 8px rgba(0, 0, 0, 0.9),
-        0 0 16px rgba(255, 255, 255, 0.24),
-        0 0 28px rgba(0, 200, 83, 0.22);
-    }
-
-    .offer-page .cta-btn {
-      display: inline-block;
-      margin-top: 30px;
-      border-radius: 10px;
-      padding: 16px 36px;
-      color: #fff;
-      background: #00c853;
-      font-size: 1.2rem;
-      font-weight: 700;
-      text-decoration: none;
-      transition: background 0.2s ease;
-    }
-
-    .offer-page .cta-btn:hover,
-    .offer-page .cta-btn:focus {
-      background: #00a844;
-    }
-
-    .offer-page .cta-btn.dark-btn {
-      margin-left: 10px;
-      background: #333;
-    }
-
-    .offer-page .cta-btn.dark-btn:hover,
-    .offer-page .cta-btn.dark-btn:focus {
-      background: #111;
-    }
-
-    .offer-card {
-      position: relative;
-      overflow: hidden;
-      margin: 40px 0;
-      border-radius: 18px;
-      padding: clamp(30px, 6vw, 50px);
-      background: #fff;
-      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
-    }
-
-    .offer-card::before {
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 60%;
-      height: 100%;
-      content: "";
-      background-image: url("assets/offer/ninja360-badge.png");
-      background-position: center right;
-      background-repeat: no-repeat;
-      background-size: contain;
-      opacity: 0.08;
-      pointer-events: none;
-    }
-
-    .offer-card.belt-black::before {
-      background-image: url("assets/offer/black-belt-package.png");
-    }
-
-    .offer-card.belt-brown::before {
-      background-image: url("assets/offer/brown-belt-package-icon.png");
-    }
-
-    .offer-card.belt-white::before {
-      background-image: url("assets/offer/white-belt-package-icon.png");
-    }
-
-    .offer-card.cinematic-shot::before {
-      background-image: url("assets/offer/ninja-media.png");
-    }
-
-    .offer-card > * {
-      position: relative;
-      z-index: 1;
-      max-width: 720px;
-    }
-
-    .offer-list {
-      margin: 20px 0 0;
-      padding-left: 22px;
-    }
-
-    .offer-list li {
-      margin: 12px 0;
-    }
-
-    .offer-note {
-      color: #555;
-    }
-
-    .secret-detail-btn {
-      display: inline-block;
-      margin-top: 14px;
-      border: 0;
-      border-radius: 999px;
-      padding: 13px 22px;
-      color: #fff;
-      background: #f97316;
-      font: inherit;
-      font-size: 1rem;
-      font-weight: 900;
-      cursor: pointer;
-      box-shadow: 0 10px 24px rgba(249, 115, 22, 0.35);
-    }
-
-    .secret-detail-btn:hover,
-    .secret-detail-btn:focus {
-      background: #ea580c;
-    }
-
-    .offer-dark {
-      padding: 100px 20px;
-      color: #fff;
-      background: #111;
-      text-align: center;
-    }
-
-    .offer-dark p {
-      margin: 20px auto;
-      opacity: 0.9;
-    }
-
-    .offer-footer {
-      padding: 40px 20px;
-      color: #555;
-      background: #eaeaea;
-      font-size: 0.95rem;
-      text-align: center;
-    }
-
-    .secret-number-overlay {
-      position: fixed;
-      inset: 0;
-      z-index: 999999;
-      display: none;
-      align-items: center;
-      justify-content: center;
-      padding: 20px;
-      background: rgba(15, 23, 42, 0.84);
-      backdrop-filter: blur(4px);
-    }
-
-    .secret-number-overlay.is-open {
-      display: flex;
-    }
-
-    .secret-number-card {
-      position: relative;
-      width: min(92vw, 570px);
-      max-height: 92vh;
-      overflow: auto;
-      border-radius: 24px;
-      padding: clamp(22px, 5vw, 34px);
-      color: #111827;
-      background: #fff;
-      text-align: center;
-      box-shadow: 0 28px 90px rgba(0, 0, 0, 0.45);
-    }
-
-    .secret-number-close {
-      position: absolute;
-      top: 12px;
-      right: 14px;
-      z-index: 5;
-      border: 0;
-      background: transparent;
-      color: #64748b;
-      font-size: 2rem;
-      line-height: 1;
-      cursor: pointer;
-    }
-
-    .fake-error-box {
-      margin: 0 auto 22px;
-      border: 2px solid #ef4444;
-      border-radius: 14px;
-      overflow: hidden;
-      background: #fff;
-      text-align: left;
-      box-shadow: 0 12px 26px rgba(239, 68, 68, 0.16);
-    }
-
-    .fake-error-title {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      padding: 11px 14px;
-      color: #fff;
-      background: #b91c1c;
-      font-weight: 900;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-    }
-
-    .fake-error-icon {
-      display: inline-grid;
-      width: 24px;
-      height: 24px;
-      place-items: center;
-      border-radius: 50%;
-      background: #fff;
-      color: #b91c1c;
-      font-weight: 900;
-    }
-
-    .fake-error-body {
-      padding: 16px 18px;
-      background: #fff7f7;
-    }
-
-    .fake-error-code {
-      display: inline-block;
-      margin: 0 0 10px;
-      border: 1px solid #fca5a5;
-      border-radius: 8px;
-      padding: 7px 10px;
-      color: #991b1b;
-      background: #fee2e2;
-      font-family: "Courier New", monospace;
-      font-size: 1.25rem;
-      font-weight: 900;
-    }
-
-    .fake-error-copy {
-      margin: 0;
-      color: #7f1d1d;
-      font-size: 1rem;
-    }
-
-    .secret-number-card h2 {
-      margin: 0 0 10px;
-      font-size: clamp(1.7rem, 5vw, 2.4rem);
-    }
-
-    .private-offer-line {
-      max-width: 440px;
-      margin: 0 auto 20px;
-      font-size: 1.1rem;
-      font-weight: 700;
-    }
-
-    .secret-gif {
-      display: block;
-      width: 100%;
-      max-width: 460px;
-      margin: 0 auto 20px;
-      border-radius: 18px;
-      background: #111;
-    }
-
-    .private-offer-note {
-      max-width: 430px;
-      margin: 0 auto;
-      color: #64748b;
-      font-size: 0.98rem;
-    }
-
-    @media (max-width: 680px) {
-      .offer-hero {
-        min-height: 560px;
-        padding: 112px 18px;
-        background-size: min(620px, 118vw) auto;
-      }
-
-      .offer-card::before {
-        width: 100%;
-        background-position: center;
-        opacity: 0.05;
-      }
-
-      .offer-page .cta-btn,
-      .offer-page .cta-btn.dark-btn {
-        display: block;
-        margin-right: 0;
-        margin-left: 0;
-        text-align: center;
-      }
-    }
+    .offer-page{margin:0;color:#1a1a1a;background:#f5f5f5;font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.6}.offer-page .section{max-width:1100px;margin:auto;padding:60px 20px}.offer-page h1,.offer-page h2,.offer-page h3{margin:0 0 20px;font-weight:700;line-height:1.2}.offer-page h1{font-size:clamp(2.6rem,6vw,3.4rem)}.offer-page h2{font-size:clamp(2rem,4vw,2.2rem)}.offer-page h3{font-size:1.4rem}.offer-page p,.offer-page li{font-size:1.15rem}.offer-hero{position:relative;display:grid;min-height:620px;place-items:center;padding:160px 20px;color:#fff;background:linear-gradient(rgba(0,0,0,.54),rgba(0,0,0,.66)),url("assets/offer/aca-logo.jpg");background-position:center;background-repeat:no-repeat;background-size:min(1005px,100vw) auto;text-align:center}.offer-hero:before{position:absolute;inset:0;content:"";background:radial-gradient(circle at center,rgba(0,0,0,.18),rgba(0,0,0,.72))}.offer-hero-content{position:relative;z-index:1;width:min(980px,100%);margin:0 auto}.offer-hero h1{max-width:920px;margin-right:auto;margin-left:auto;text-align:center;text-wrap:balance;text-shadow:0 2px 10px rgba(0,0,0,.92),0 0 18px rgba(255,255,255,.36),0 0 34px rgba(0,200,83,.32)}.offer-hero p{max-width:760px;margin:20px auto 0;font-size:1.35rem;text-align:center;text-wrap:balance;text-shadow:0 2px 8px rgba(0,0,0,.9),0 0 16px rgba(255,255,255,.24),0 0 28px rgba(0,200,83,.22)}.offer-page .cta-btn{display:inline-block;margin-top:30px;border-radius:10px;padding:16px 36px;color:#fff;background:#00c853;font-size:1.2rem;font-weight:700;text-decoration:none;transition:background .2s ease}.offer-page .cta-btn:hover,.offer-page .cta-btn:focus{background:#00a844}.offer-page .cta-btn.dark-btn{margin-left:10px;background:#333}.offer-page .cta-btn.dark-btn:hover,.offer-page .cta-btn.dark-btn:focus{background:#111}.offer-card{position:relative;overflow:hidden;margin:40px 0;border-radius:18px;padding:clamp(30px,6vw,50px);background:#fff;box-shadow:0 12px 30px rgba(0,0,0,.08)}.offer-card:before{position:absolute;top:0;right:0;width:60%;height:100%;content:"";background-image:url("assets/offer/ninja360-badge.png");background-position:center right;background-repeat:no-repeat;background-size:contain;opacity:.08;pointer-events:none}.offer-card.belt-black:before{background-image:url("assets/offer/black-belt-package.png")}.offer-card.belt-brown:before{background-image:url("assets/offer/brown-belt-package-icon.png")}.offer-card.belt-white:before{background-image:url("assets/offer/white-belt-package-icon.png")}.offer-card.cinematic-shot:before{background-image:url("assets/offer/ninja-media.png")}.offer-card>*{position:relative;z-index:1;max-width:720px}.offer-list{margin:20px 0 0;padding-left:22px}.offer-list li{margin:12px 0}.offer-note{color:#555}.secret-detail-btn{display:inline-block;margin-top:14px;border:0;border-radius:999px;padding:13px 22px;color:#fff;background:#f97316;font:inherit;font-size:1rem;font-weight:900;cursor:pointer;box-shadow:0 10px 24px rgba(249,115,22,.35)}.secret-detail-btn:hover,.secret-detail-btn:focus{background:#ea580c}.offer-dark{padding:100px 20px;color:#fff;background:#111;text-align:center}.offer-dark p{margin:20px auto;opacity:.9}.offer-footer{padding:40px 20px;color:#555;background:#eaeaea;font-size:.95rem;text-align:center}.secret-number-overlay{position:fixed;inset:0;z-index:999999;display:none;align-items:center;justify-content:center;padding:20px;background:rgba(15,23,42,.84);backdrop-filter:blur(4px)}.secret-number-overlay.is-open{display:flex}.secret-number-card{position:relative;width:min(92vw,570px);max-height:92vh;overflow:auto;border-radius:24px;padding:clamp(22px,5vw,34px);color:#111827;background:#fff;text-align:center;box-shadow:0 28px 90px rgba(0,0,0,.45)}.secret-number-close{position:absolute;top:12px;right:14px;z-index:5;border:0;background:transparent;color:#64748b;font-size:2rem;line-height:1;cursor:pointer}.fake-error-box{margin:0 auto 22px;border:2px solid #ef4444;border-radius:14px;overflow:hidden;background:#fff;text-align:left;box-shadow:0 12px 26px rgba(239,68,68,.16)}.fake-error-title{display:flex;align-items:center;gap:10px;padding:11px 14px;color:#fff;background:#b91c1c;font-weight:900;letter-spacing:.04em;text-transform:uppercase}.fake-error-icon{display:inline-grid;width:24px;height:24px;place-items:center;border-radius:50%;background:#fff;color:#b91c1c;font-weight:900}.fake-error-body{padding:16px 18px;background:#fff7f7}.fake-error-code{display:inline-block;margin:0 0 10px;border:1px solid #fca5a5;border-radius:8px;padding:7px 10px;color:#991b1b;background:#fee2e2;font-family:"Courier New",monospace;font-size:1.25rem;font-weight:900}.fake-error-copy{margin:0;color:#7f1d1d;font-size:1rem}.secret-number-card h2{margin:0 0 10px;font-size:clamp(1.7rem,5vw,2.4rem)}.private-offer-line{max-width:440px;margin:0 auto 20px;font-size:1.1rem;font-weight:700}.secret-gif{display:block;width:100%;max-width:460px;margin:0 auto 20px;border-radius:18px;background:#111}.private-offer-note{max-width:430px;margin:0 auto;color:#64748b;font-size:.98rem}@media(max-width:680px){.offer-hero{min-height:560px;padding:112px 18px;background-size:min(620px,118vw) auto}.offer-card:before{width:100%;background-position:center;opacity:.05}.offer-page .cta-btn,.offer-page .cta-btn.dark-btn{display:block;margin-right:0;margin-left:0;text-align:center}}
   </style>
 </head>
-
 <body class="offer-page" style="display: none;">
   <section class="offer-hero">
     <div class="offer-hero-content">
@@ -404,12 +34,7 @@
         <h2>The Deal, in Plain Language</h2>
         <ul class="offer-list">
           <li><strong>No traditional upfront build fee.</strong> I carry the initial build risk for this specific partnership.</li>
-          <li>
-            <strong>Performance-based structure.</strong> I only earn when the space earns.<br>
-            <button class="secret-detail-btn" type="button" id="open-secret-number">
-              View private partnership detail
-            </button>
-          </li>
+          <li><strong>Performance-based structure.</strong> I only earn when the space earns.<br><button class="secret-detail-btn" type="button" id="open-secret-number">View private partnership detail</button></li>
           <li><strong>One-year partnership term.</strong> With a 90-day review built in.</li>
           <li><strong>Ninja-360 system.</strong> Every booking runs through one visible system.</li>
         </ul>
@@ -442,19 +67,14 @@
     </section>
   </main>
 
-  <footer class="offer-footer">
-    1894 Event Space - Hosted by ACA Business Club Liberty
-  </footer>
+  <footer class="offer-footer">1894 Event Space - Hosted by ACA Business Club Liberty</footer>
 
   <div class="secret-number-overlay" id="secret-number-popup" aria-hidden="true">
     <div class="secret-number-card" role="dialog" aria-modal="true" aria-labelledby="secret-number-title">
       <button class="secret-number-close" type="button" id="close-secret-number" aria-label="Close private partnership detail">×</button>
 
       <div class="fake-error-box" aria-label="ID10T error message">
-        <div class="fake-error-title">
-          <span class="fake-error-icon">!</span>
-          <span>Access Denied</span>
-        </div>
+        <div class="fake-error-title"><span class="fake-error-icon">!</span><span>Access Denied</span></div>
         <div class="fake-error-body">
           <div class="fake-error-code">ERROR CODE: iD10T</div>
           <p class="fake-error-copy">Unauthorized pricing curiosity detected.</p>
@@ -462,16 +82,9 @@
       </div>
 
       <h2 id="secret-number-title">Looking for the $ecret number?</h2>
-
-      <p class="private-offer-line">
-        Put the punch glass down, Felicia, and mind your business please. 🥷
-      </p>
-
+      <p class="private-offer-line">Put the punch glass down, Felicia, and mind your business please. 🥷</p>
       <img src="assets/offer/secret-number-punch.gif" alt="Prom punch surprise gif" class="secret-gif">
-
-      <p class="private-offer-note">
-        Not a public coupon. Not a standard offer. Founder-to-founder only.
-      </p>
+      <p class="private-offer-note">Not a public coupon. Not a standard offer. Founder-to-founder only.</p>
     </div>
   </div>
 
@@ -484,48 +97,22 @@
         </div>
         <button class="event-request-close" type="button" data-close-event-request aria-label="Close event request form">Close</button>
       </div>
-      <iframe
-        src="https://links.ninja360.net/widget/form/Wzm3oKyw3HILRRzgmg9f"
-        title="Banquet Hall Event Request"
-        loading="lazy"
-      ></iframe>
+      <iframe src="https://links.ninja360.net/widget/form/Wzm3oKyw3HILRRzgmg9f" title="Banquet Hall Event Request" loading="lazy"></iframe>
     </div>
   </dialog>
 
   <script src="event-request.js"></script>
-
   <script>
-    (function () {
-      const openButton = document.getElementById("open-secret-number");
-      const closeButton = document.getElementById("close-secret-number");
-      const popup = document.getElementById("secret-number-popup");
-
-      function openSecretPopup() {
-        popup.classList.add("is-open");
-        popup.setAttribute("aria-hidden", "false");
-        document.body.style.overflow = "hidden";
-      }
-
-      function closeSecretPopup() {
-        popup.classList.remove("is-open");
-        popup.setAttribute("aria-hidden", "true");
-        document.body.style.overflow = "";
-      }
-
-      openButton.addEventListener("click", openSecretPopup);
-      closeButton.addEventListener("click", closeSecretPopup);
-
-      popup.addEventListener("click", function (event) {
-        if (event.target === popup) {
-          closeSecretPopup();
-        }
-      });
-
-      document.addEventListener("keydown", function (event) {
-        if (event.key === "Escape" && popup.classList.contains("is-open")) {
-          closeSecretPopup();
-        }
-      });
+    (function(){
+      const openButton=document.getElementById("open-secret-number");
+      const closeButton=document.getElementById("close-secret-number");
+      const popup=document.getElementById("secret-number-popup");
+      function openSecretPopup(){popup.classList.add("is-open");popup.setAttribute("aria-hidden","false");document.body.style.overflow="hidden";}
+      function closeSecretPopup(){popup.classList.remove("is-open");popup.setAttribute("aria-hidden","true");document.body.style.overflow="";}
+      openButton.addEventListener("click",openSecretPopup);
+      closeButton.addEventListener("click",closeSecretPopup);
+      popup.addEventListener("click",function(event){if(event.target===popup){closeSecretPopup();}});
+      document.addEventListener("keydown",function(event){if(event.key==="Escape"&&popup.classList.contains("is-open")){closeSecretPopup();}});
     })();
   </script>
 </body>
