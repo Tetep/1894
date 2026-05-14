@@ -6,7 +6,7 @@
     new YT.Player("venue-video-player", {
       events: {
         onReady: function (event) {
-          event.target.setVolume(50);
+          event.target.setVolume(35);
           event.target.unMute();
           event.target.playVideo();
         }
