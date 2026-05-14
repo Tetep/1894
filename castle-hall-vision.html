@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex,nofollow">
+    <title>Castle Hall — The Vision</title>
+    <meta name="description" content="Private vision document for Castle Hall, Liberty Square. Not for public distribution.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+      .vision-page { background: #f6f3ee; color: #2a2118; }
+      .vision-hero {
+        position: relative;
+        min-height: 78vh;
+        display: flex; align-items: center; justify-content: center;
+        text-align: center;
+        padding: 100px 24px 80px;
+        background: linear-gradient(165deg, #2a1f15 0%, #4a2a1a 55%, #6b3520 100%);
+        color: #f6f3ee;
+        overflow: hidden;
+      }
+      .vision-hero::before {
+        content: ""; position: absolute; inset: 0;
+        background: radial-gradient(ellipse at 30% 30%, rgba(196,140,55,0.35) 0%, transparent 60%),
+                    radial-gradient(ellipse at 80% 80%, rgba(120,40,40,0.30) 0%, transparent 55%);
+        pointer-events: none;
+      }
+      .vision-hero-inner { position: relative; z-index: 2; max-width: 880px; margin: 0 auto; }
+      .vision-eyebrow {
+        display: inline-block;
+        background: rgba(196,140,55,0.18);
+        border: 1.5px solid rgba(196,140,55,0.55);
+        color: #e8c670;
+        padding: 7px 18px; border-radius: 999px;
+        font-size: 12px; font-weight: 700;
+        letter-spacing: 2px; text-transform: uppercase;
+        margin-bottom: 28px;
+      }
+      .vision-hero h1 {
+        font-family: 'Caveat Brush', 'Playfair Display', Georgia, serif;
+        font-size: clamp(2.6rem, 6vw, 4.6rem);
+        line-height: 1.05;
+        margin: 0 0 22px;
+        color: #f6f3ee;
+        letter-spacing: 0.005em;
+      }
+      .vision-hero h1 em { font-style: normal; color: #e8c670; }
+      .vision-lede {
+        font-family: "Playfair Display", Georgia, serif;
+        font-size: clamp(1.05rem, 1.6vw, 1.35rem);
+        line-height: 1.55;
+        color: #ece4d6;
+        max-width: 680px;
+        margin: 0 auto 36px;
+      }
+      .vision-actions { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; }
+      .vision-btn {
+        display: inline-block;
+        padding: 16px 34px;
+        border-radius: 999px;
+        font-weight: 700;
+        font-size: 16px;
+        text-decoration: none;
+        letter-spacing: 0.02em;
+        transition: all 0.25s;
+      }
+      .vision-btn-gold {
+        background: #c48c37; color: #2a1f15;
+        box-shadow: 0 6px 28px rgba(196,140,55,0.45);
+      }
+      .vision-btn-gold:hover { background: #e8c670; transform: translateY(-2px); }
+      .vision-btn-outline {
+        background: rgba(255,255,255,0.06);
+        color: #f6f3ee;
+        border: 1.5px solid rgba(246,243,238,0.5);
+        backdrop-filter: blur(4px);
+      }
+      .vision-btn-outline:hover { background: rgba(255,255,255,0.15); border-color: #e8c670; color: #e8c670; }
+
+      .vision-section { padding: 88px 24px; max-width: 1080px; margin: 0 auto; }
+      .vision-section h2 {
+        font-family: "Playfair Display", Georgia, serif;
+        font-size: clamp(1.7rem, 3vw, 2.4rem);
+        font-weight: 800;
+        color: #2a1f15; margin: 0 0 16px;
+        line-height: 1.15;
+      }
+      .vision-section p {
+        font-family: "Playfair Display", Georgia, serif;
+        font-size: 1.08rem; line-height: 1.7; color: #4a3c2c;
+      }
+      .vision-section .eyebrow-row {
+        font-family: Inter, sans-serif;
+        font-size: 11px; font-weight: 700; letter-spacing: 2px;
+        text-transform: uppercase; color: #c48c37;
+        margin: 0 0 14px;
+      }
+
+      .vision-pull {
+        background: #2a1f15; color: #f6f3ee;
+        padding: 70px 24px; text-align: center;
+      }
+      .vision-pull-inner { max-width: 820px; margin: 0 auto; }
+      .vision-pull h3 {
+        font-family: 'Caveat Brush', 'Playfair Display', Georgia, serif;
+        font-size: clamp(1.8rem, 3.6vw, 2.8rem);
+        color: #e8c670;
+        line-height: 1.2;
+        margin: 0 0 18px;
+      }
+      .vision-pull p { color: #d8ccb6; font-family: "Playfair Display", Georgia, serif; font-size: 1.1rem; }
+
+      .artifact-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 24px;
+        margin-top: 36px;
+      }
+      .artifact-card {
+        background: #fff;
+        border: 1px solid #d8ccb6;
+        border-radius: 14px;
+        overflow: hidden;
+        display: flex; flex-direction: column;
+      }
+      .artifact-photo {
+        height: 220px;
+        background: linear-gradient(135deg, #ece4d6 0%, #d8ccb6 100%);
+        display: flex; align-items: center; justify-content: center;
+        color: #8a7a5e; font-size: 12px; letter-spacing: 0.05em;
+        text-transform: uppercase; text-align: center; padding: 12px;
+      }
+      .artifact-body { padding: 20px; }
+      .artifact-body h4 {
+        font-family: "Playfair Display", Georgia, serif;
+        font-size: 1.15rem; color: #2a1f15; margin: 0 0 6px;
+      }
+      .artifact-body p { font-size: 0.92rem; line-height: 1.55; color: #5a4d3c; margin: 0; }
+
+      .kelly-callout {
+        display: grid;
+        grid-template-columns: 1fr 1.2fr;
+        gap: 36px; align-items: center;
+        background: #fff;
+        border: 1px solid #d8ccb6; border-radius: 16px;
+        padding: 36px;
+        margin-top: 28px;
+      }
+      .kelly-callout .kelly-photo {
+        height: 320px;
+        background: linear-gradient(135deg, #ece4d6 0%, #c48c37 130%);
+        border-radius: 12px;
+        display: flex; align-items: center; justify-content: center;
+        color: #6b5238; font-size: 12px; letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .recruit-section {
+        background: linear-gradient(165deg, #2a1f15 0%, #4a2a1a 100%);
+        color: #f6f3ee; padding: 96px 24px;
+      }
+      .recruit-inner { max-width: 880px; margin: 0 auto; text-align: center; }
+      .recruit-inner h2 {
+        font-family: 'Caveat Brush', 'Playfair Display', Georgia, serif;
+        color: #f6f3ee; font-size: clamp(2rem, 4vw, 3rem);
+        line-height: 1.1; margin: 0 0 20px;
+      }
+      .recruit-inner h2 em { font-style: normal; color: #e8c670; }
+      .recruit-inner p { color: #ece4d6; font-family: "Playfair Display", Georgia, serif; font-size: 1.15rem; line-height: 1.6; margin: 0 0 32px; }
+
+      .stealth-footer-link {
+        position: absolute;
+        right: 18px;
+        bottom: 14px;
+        font-family: Inter, sans-serif;
+        font-size: 11px;
+        color: rgba(170, 158, 138, 0.55);
+        text-decoration: none;
+        letter-spacing: 0.15em;
+        transition: color 0.4s ease;
+      }
+      .stealth-footer-link:hover { color: #c48c37; }
+
+      @media (max-width: 560px) {
+        .vision-hero { min-height: 70vh; padding: 80px 18px 60px; }
+        .vision-section { padding: 56px 18px; }
+        .kelly-callout { grid-template-columns: 1fr; padding: 24px; }
+        .vision-pull { padding: 50px 18px; }
+        .recruit-section { padding: 64px 18px; }
+        .stealth-footer-link { right: 12px; bottom: 10px; font-size: 10px; }
+      }
+    </style>
+  </head>
+  <body class="vision-page">
+    <header class="site-header">
+      <a class="brand" href="/" aria-label="Castle Hall home">
+        <img class="brand-logo" src="https://restoration1894.com/wp-content/uploads/2019/02/Restoration-1894-Website.png" alt="Castle Hall logo">
+        <span>
+          <strong>Castle Hall</strong>
+          <small>Liberty Square &middot; Vision Document</small>
+        </span>
+      </a>
+      <a class="button button-dark header-cta" href="mailto:mustangkelly1@gmail.com">Talk to Kelly</a>
+    </header>
+
+    <main>
+      <section class="vision-hero" aria-labelledby="vision-title">
+        <div class="vision-hero-inner">
+          <span class="vision-eyebrow">The Full Vision</span>
+          <h1 id="vision-title">Built by the Sisters in 1894. <em>Restored to host the next 100 years.</em></h1>
+          <p class="vision-lede">
+            For more than a century, this second-floor hall on Liberty Square was home to the Pythian
+            Sisters &mdash; women who built community, kept records, and gathered around the same room
+            generation after generation. Today, Kelly Kinnett is restoring what they left behind.
+          </p>
+          <div class="vision-actions">
+            <a class="vision-btn vision-btn-gold" href="mailto:mustangkelly1@gmail.com?subject=Castle%20Hall%20Vision%20Tour">Schedule a Vision Tour with Kelly</a>
+            <a class="vision-btn vision-btn-outline" href="#membership">Become an ACA Member</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="vision-section">
+        <p class="eyebrow-row">The Lineage</p>
+        <h2>A Hall Built by the Pythian Sisters</h2>
+        <p>
+          The Pythian Sisters &mdash; the women's order of the Knights of Pythias &mdash; established
+          their chapter here after a fire reshaped Liberty Square in the early 1890s. The hall was
+          built in 1894 as their <em>Castle</em>: a meeting place, a chapter room, a private space for
+          ritual, philanthropy, and the slow, patient work of caring for a community.
+        </p>
+        <p>
+          For over a century, the Sisters kept the hall in continuous use. They raised funds for
+          widows and orphans. They built local relief networks. They held weddings, funerals, and
+          installations on the same hardwood floors that hold today's events. The lineage is in
+          the room.
+        </p>
+      </section>
+
+      <section class="vision-pull">
+        <div class="vision-pull-inner">
+          <h3>"The Sisters didn't leave the building. They left it ready."</h3>
+          <p>&mdash; Kelly Kinnett, on what she found when she walked in</p>
+        </div>
+      </section>
+
+      <section class="vision-section">
+        <p class="eyebrow-row">The Artifacts</p>
+        <h2>What Was Left Behind</h2>
+        <p>
+          During restoration, original artifacts from the Pythian Sisters era were discovered tucked
+          into closets, locked cabinets, and the back of the meeting room. Each tells part of the
+          story. Photographs of each artifact are forthcoming &mdash; placeholders below.
+        </p>
+        <div class="artifact-grid">
+          <article class="artifact-card">
+            <div class="artifact-photo">[ Artifact Photo &mdash; coming ]</div>
+            <div class="artifact-body">
+              <h4>The Charter</h4>
+              <p>The original chapter charter, signed by the founding Sisters and the regional Grand Chief.</p>
+            </div>
+          </article>
+          <article class="artifact-card">
+            <div class="artifact-photo">[ Artifact Photo &mdash; coming ]</div>
+            <div class="artifact-body">
+              <h4>Ritual Regalia</h4>
+              <p>Ceremonial sashes, badges, and officer collars used in chapter installations for generations.</p>
+            </div>
+          </article>
+          <article class="artifact-card">
+            <div class="artifact-photo">[ Artifact Photo &mdash; coming ]</div>
+            <div class="artifact-body">
+              <h4>The Ledger</h4>
+              <p>A hand-bound minute book covering decades of meetings, motions, and members in good standing.</p>
+            </div>
+          </article>
+          <article class="artifact-card">
+            <div class="artifact-photo">[ Artifact Photo &mdash; coming ]</div>
+            <div class="artifact-body">
+              <h4>The Officers' Chairs</h4>
+              <p>The original ranked seating used by chapter officers during ritual work, still in the room.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="vision-section">
+        <p class="eyebrow-row">The Stewardship</p>
+        <h2>Kelly's Restoration</h2>
+        <div class="kelly-callout">
+          <div class="kelly-photo">[ Kelly portrait &mdash; coming ]</div>
+          <div>
+            <p>
+              Kelly Kinnett walked into the hall and saw what the Sisters had left ready: a working
+              kitchen, beautiful bathrooms, an open floor plan with the bones of a century of careful use.
+            </p>
+            <p>
+              The restoration is not a renovation. It's a return. The same room. The same lineage.
+              Reopened, repaired where needed, and held for the next hundred years of gatherings,
+              celebrations, and quiet community work.
+            </p>
+            <p>
+              <a href="mailto:mustangkelly1@gmail.com" style="color:#c48c37; font-weight:600;">mustangkelly1@gmail.com</a>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="recruit-section" id="membership">
+        <div class="recruit-inner">
+          <h2>Castle Hall is a <em>members-only</em> venue.</h2>
+          <p>
+            The hall is reserved for members of the ACA Business Club &mdash; a small, intentional
+            community of business owners, makers, and stewards. Member rates for the hall are
+            stunningly low compared to comparable historic venues, by design: the hall is not a
+            rental business. It's a member benefit, run for the community that uses it.
+          </p>
+          <div class="vision-actions">
+            <a class="vision-btn vision-btn-gold" href="mailto:mustangkelly1@gmail.com?subject=ACA%20Membership%20Inquiry">Talk to Kelly About Membership</a>
+            <a class="vision-btn vision-btn-outline" href="foundation.html">Read About the Foundation</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" style="position:relative;">
+      <div>
+        <h2>Castle Hall</h2>
+        <p>The full vision &mdash; a private document for stakeholders, members, and friends of the hall.</p>
+        <p>1 E Kansas St<br>Liberty, MO 64068</p>
+      </div>
+      <div>
+        <h3>Contact</h3>
+        <p>
+          <a href="mailto:mustangkelly1@gmail.com">mustangkelly1@gmail.com</a><br>
+          <small>Kelly Kinnett &mdash; Steward of Castle Hall</small>
+        </p>
+      </div>
+      <div>
+        <h3>Public Site</h3>
+        <a href="/">1894.tours home</a>
+        <a href="/Booking.html">Pricing &amp; Booking</a>
+        <a href="/foundation.html">About ACA</a>
+      </div>
+      <div>
+        <h3>Status</h3>
+        <p><small>Vision document &mdash; not for public distribution.</small></p>
+      </div>
+      <a class="stealth-footer-link" href="/" aria-label="Public site">1894</a>
+    </footer>
+  </body>
+</html>

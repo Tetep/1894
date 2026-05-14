@@ -2819,3 +2819,32 @@ blockquote {
 .form-submit-btn:hover {
   background: #00a844;
 }
+
+/* === V1 Castle Hall additions === */
+
+/* Caveat Brush display font on hero h1 (Brown Sugar substitute, path C) */
+.hero h1, #hero-title {
+  font-family: 'Caveat Brush', 'Playfair Display', Georgia, serif;
+  letter-spacing: 0.01em;
+  line-height: 1.08;
+}
+
+/* Stealth vision link — bottom-right of footer on every public page */
+.site-footer { position: relative; }
+.stealth-vision-link {
+  position: absolute;
+  right: 18px;
+  bottom: 14px;
+  font-family: Inter, sans-serif;
+  font-size: 11px;
+  color: rgba(170, 158, 138, 0.45);
+  text-decoration: none;
+  letter-spacing: 0.18em;
+  transition: color 0.5s ease;
+}
+.stealth-vision-link:hover { color: #c48c37; }
+
+@media (max-width: 560px) {
+  .stealth-vision-link { right: 12px; bottom: 10px; font-size: 10px; }
+  .hero h1, #hero-title { font-size: clamp(2.2rem, 9vw, 3rem); }
+}
