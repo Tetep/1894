@@ -184,6 +184,62 @@
       }
       .stealth-footer-link:hover { color: #c48c37; }
 
+      /* === Section 3 image elements === */
+      .vision-figure { margin: 36px 0; }
+      .vision-figure img { width: 100%; height: auto; display: block; border-radius: 10px; box-shadow: 0 6px 20px rgba(42,31,21,0.18); }
+      .vision-figure figcaption {
+        font-family: "Playfair Display", Georgia, serif;
+        font-size: 0.92rem; color: #6b5238;
+        text-align: center; margin-top: 10px;
+        font-style: italic; line-height: 1.5;
+      }
+      .vision-figure-wide img { max-height: 520px; object-fit: cover; }
+
+      .vision-sidebar {
+        display: grid;
+        grid-template-columns: 220px 1fr;
+        gap: 24px;
+        background: #ece4d6;
+        border-left: 4px solid #c48c37;
+        padding: 24px;
+        margin: 36px 0;
+        border-radius: 6px;
+        align-items: center;
+      }
+      .vision-sidebar-figure img { width: 100%; height: auto; display: block; border-radius: 4px; }
+      .vision-sidebar p {
+        font-family: "Playfair Display", Georgia, serif;
+        font-size: 1.05rem; line-height: 1.65; color: #4a3c2c; margin: 0;
+      }
+
+      .sisters-subsection { margin-top: 56px; }
+      .sisters-subsection-head {
+        display: flex; align-items: center; gap: 18px; margin-bottom: 22px;
+      }
+      .vision-logo-accent {
+        width: 64px; height: 64px; flex-shrink: 0;
+        object-fit: cover; border-radius: 50%;
+        box-shadow: 0 2px 10px rgba(42,31,21,0.18);
+      }
+      .sisters-subsection h3 {
+        font-family: "Playfair Display", Georgia, serif;
+        font-size: 1.55rem; color: #2a1f15; margin: 0; line-height: 1.2;
+      }
+      .sisters-photos {
+        display: grid; grid-template-columns: 1fr 1fr; gap: 24px;
+      }
+      .sisters-photos figure { margin: 0; }
+      .sisters-photos figure img {
+        width: 100%; height: 360px; object-fit: cover;
+        border-radius: 10px; display: block;
+        box-shadow: 0 6px 20px rgba(42,31,21,0.18);
+      }
+      .sisters-photos figcaption {
+        font-family: "Playfair Display", Georgia, serif;
+        font-size: 0.9rem; color: #6b5238;
+        margin-top: 10px; font-style: italic; line-height: 1.5;
+      }
+
       @media (max-width: 560px) {
         .vision-hero { min-height: 70vh; padding: 80px 18px 60px; }
         .vision-section { padding: 56px 18px; }
@@ -191,6 +247,11 @@
         .vision-pull { padding: 50px 18px; }
         .recruit-section { padding: 64px 18px; }
         .stealth-footer-link { right: 12px; bottom: 10px; font-size: 10px; }
+        .vision-sidebar { grid-template-columns: 1fr; padding: 18px; }
+        .vision-figure-wide img { max-height: 320px; }
+        .sisters-photos { grid-template-columns: 1fr; gap: 18px; }
+        .sisters-photos figure img { height: 280px; }
+        .sisters-subsection-head { flex-direction: row; align-items: center; }
       }
     </style>
   </head>
@@ -207,6 +268,7 @@
     </header>
 
     <main>
+      <!-- TODO: Tim to confirm hero image. Springfield Castle is NOT Liberty's Castle Hall - hold for Section 3 not hero. -->
       <section class="vision-hero" aria-labelledby="vision-title">
         <div class="vision-hero-inner">
           <span class="vision-eyebrow">The Full Vision</span>
@@ -226,6 +288,19 @@
       <section class="vision-section">
         <p class="eyebrow-row">The Lineage</p>
         <h2>A Hall Built by the Pythian Sisters</h2>
+
+        <figure class="vision-figure vision-figure-wide">
+          <img src="assets/castle-hall-vision/pythian-castle-springfield.jpg" alt="Pythian Castle in Springfield, Missouri &mdash; a stone fraternal lodge building still standing" loading="lazy">
+          <figcaption>Pythian Castle, Springfield, Missouri. Castle Hall, Liberty is one of several Pythian buildings still standing across America.</figcaption>
+        </figure>
+
+        <aside class="vision-sidebar">
+          <figure class="vision-sidebar-figure">
+            <img src="assets/castle-hall-vision/secret-societies-context.jpg" alt="Newspaper feature: When Secret Societies Were Ordinary" loading="lazy">
+          </figure>
+          <p>In the early 20th century, fraternal orders were not fringe &mdash; they were ordinary American civic infrastructure. Communities organized around them. The Pythian Sisters were part of that fabric.</p>
+        </aside>
+
         <p>
           The Pythian Sisters &mdash; the women's order of the Knights of Pythias &mdash; established
           their chapter here after a fire reshaped Liberty Square in the early 1890s. The hall was
@@ -238,6 +313,23 @@
           installations on the same hardwood floors that hold today's events. The lineage is in
           the room.
         </p>
+
+        <div class="sisters-subsection">
+          <div class="sisters-subsection-head">
+            <img class="vision-logo-accent" src="assets/castle-hall-vision/pythian-sisters-logo.jpg" alt="Pythian Sisters FELP shield insignia" loading="lazy">
+            <h3>The Sisters Held the Floor</h3>
+          </div>
+          <div class="sisters-photos">
+            <figure>
+              <img src="assets/castle-hall-vision/pythian-sisters-parade.jpg" alt="Pythian Sisters marching with banner in a community parade" loading="lazy">
+              <figcaption>Pythian Sisters at a community parade, mid-20th century.</figcaption>
+            </figure>
+            <figure>
+              <img src="assets/castle-hall-vision/pythian-sisters-drill-team.jpg" alt="Pythian Sisters drill team in white uniforms" loading="lazy">
+              <figcaption>Pythian Sisters drill team. The women's order operated alongside the Knights with full ritual and ceremony.</figcaption>
+            </figure>
+          </div>
+        </div>
       </section>
 
       <section class="vision-pull">
