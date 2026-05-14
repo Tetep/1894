@@ -2833,16 +2833,18 @@ blockquote {
 .site-footer { position: relative; }
 .stealth-vision-link {
   position: absolute;
-  right: 18px;
-  bottom: 14px;
+  right: 22px;
+  bottom: 18px;
   font-family: Inter, sans-serif;
   font-size: 11px;
-  color: rgba(170, 158, 138, 0.45);
+  font-weight: 600;
+  color: rgba(232, 198, 112, 0.62);
   text-decoration: none;
-  letter-spacing: 0.18em;
-  transition: color 0.5s ease;
+  letter-spacing: 0.22em;
+  transition: color 0.4s ease;
+  z-index: 5;
 }
-.stealth-vision-link:hover { color: #c48c37; }
+.stealth-vision-link:hover { color: #e8c670; }
 
 @media (max-width: 560px) {
   .stealth-vision-link { right: 12px; bottom: 10px; font-size: 10px; }
